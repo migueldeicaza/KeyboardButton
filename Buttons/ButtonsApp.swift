@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct ButtonsApp: App {
+    @State var foo = "test"
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            VStack {
+                ContentView(primary: "8", secondary: "*")
+                TextField ("Hello", text: $foo)
+            }
         }
     }
 }
